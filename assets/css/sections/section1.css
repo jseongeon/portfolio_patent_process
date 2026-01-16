@@ -98,7 +98,7 @@
     color: var(--color-beige);
     margin: 0 0 120px 0;
     width: 100%;
-    text-align: center;
+    text-align: left;
 }
 
 /* 검은 박스 설명 문단들 */
@@ -111,7 +111,7 @@
     color: var(--color-beige);
     margin: 0 0 60px 0;
     width: 100%;
-    text-align: center;
+    text-align: left;
 }
 
 .section1-black-box-note:last-child {
