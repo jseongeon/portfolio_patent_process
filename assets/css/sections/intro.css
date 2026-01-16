@@ -1,0 +1,122 @@
+/* Intro Section */
+.intro {
+    background-color: var(--color-black);
+    color: var(--color-light-gray);
+    position: relative;
+    min-height: 1080px;
+    height: 100vh;
+}
+
+.intro .container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.intro-top {
+    position: absolute;
+    top: 40px;
+    font-family: var(--font-pretendard);
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 57px;
+    letter-spacing: -2.4px;
+    text-align: center;
+    color: var(--color-light-gray);
+    margin: 0;
+}
+
+.intro-title {
+    font-family: var(--font-pretendard);
+    font-weight: 600;
+    font-size: 96px;
+    line-height: 115.2px;
+    letter-spacing: -2.112px;
+    color: var(--color-light-gray);
+    text-align: center;
+    margin: 0;
+}
+
+.intro-title p {
+    margin: 0;
+}
+
+.intro-bottom {
+    position: absolute;
+    bottom: 57px;
+    font-family: var(--font-pretendard);
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 57px;
+    letter-spacing: -2.4px;
+    text-align: center;
+    color: var(--color-light-gray);
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .intro {
+        min-height: auto;
+        height: auto;
+    }
+
+    .intro .container {
+        min-height: 100vh;
+        padding: 60px 20px;
+    }
+
+    .intro-top {
+        position: relative;
+        top: auto;
+        font-size: 40px;
+        line-height: 48px;
+        margin-bottom: 40px;
+    }
+
+    .intro-title {
+        font-size: 48px;
+        line-height: 58px;
+        margin: 60px 0;
+    }
+
+    .intro-bottom {
+        position: relative;
+        bottom: auto;
+        font-size: 40px;
+        line-height: 48px;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .intro .container {
+        padding: 40px 16px;
+    }
+
+    .intro-top {
+        font-size: 28px;
+        line-height: 34px;
+        margin-bottom: 30px;
+    }
+
+    .intro-title {
+        font-size: 36px;
+        line-height: 44px;
+        margin: 40px 0;
+    }
+
+    .intro-bottom {
+        font-size: 28px;
+        line-height: 34px;
+        margin-top: 30px;
+    }
+}

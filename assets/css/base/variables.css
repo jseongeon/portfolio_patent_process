@@ -1,0 +1,13 @@
+/* CSS Variables */
+:root {
+    --color-black: #000000;
+    --color-white: #ffffff;
+    --color-beige: #f6f0eb;
+    --color-light-gray: #f2f4f3;
+    --color-gray: #9a9a9a;
+    --color-blue-gradient: linear-gradient(90deg, #71a9ff 0%, #1758b7 48.6%, #0b4cad 100%);
+    --font-inter: 'Inter', sans-serif;
+    --font-space-grotesk: 'Space Grotesk', sans-serif;
+    --font-space-mono: 'Space Mono', monospace;
+    --font-pretendard: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+}

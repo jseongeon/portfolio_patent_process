@@ -1,0 +1,176 @@
+/* ==========================================
+   Loader Styles - GSAP Style Animation
+   ========================================== */
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #0a0a0a;
+    z-index: 10001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.loader-text {
+    font-family: var(--font-pretendard);
+    font-size: clamp(2rem, 6vw, 4.5rem);
+    font-weight: 800;
+    color: #ffffff;
+    text-align: center;
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+}
+
+.loader-text span {
+    display: inline-block;
+    transform: translateY(100%);
+    opacity: 0;
+    animation: letterReveal 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* 첫 줄: CEO STAFF (9글자, 1~9번) */
+.loader-text span:nth-child(1) { animation-delay: 0.1s; }
+.loader-text span:nth-child(2) { animation-delay: 0.15s; }
+.loader-text span:nth-child(3) { animation-delay: 0.2s; }
+.loader-text span:nth-child(4) { animation-delay: 0.25s; }
+.loader-text span:nth-child(5) { animation-delay: 0.3s; }
+.loader-text span:nth-child(6) { animation-delay: 0.35s; }
+.loader-text span:nth-child(7) { animation-delay: 0.4s; }
+.loader-text span:nth-child(8) { animation-delay: 0.45s; }
+.loader-text span:nth-child(9) { animation-delay: 0.5s; }
+
+/* 두 번째 줄: JEONG SEONG EON (15글자, br 다음이므로 11~25번) */
+.loader-text span:nth-child(11) { animation-delay: 0.6s; }
+.loader-text span:nth-child(12) { animation-delay: 0.65s; }
+.loader-text span:nth-child(13) { animation-delay: 0.7s; }
+.loader-text span:nth-child(14) { animation-delay: 0.75s; }
+.loader-text span:nth-child(15) { animation-delay: 0.8s; }
+.loader-text span:nth-child(16) { animation-delay: 0.85s; }
+.loader-text span:nth-child(17) { animation-delay: 0.9s; }
+.loader-text span:nth-child(18) { animation-delay: 0.95s; }
+.loader-text span:nth-child(19) { animation-delay: 1.0s; }
+.loader-text span:nth-child(20) { animation-delay: 1.05s; }
+.loader-text span:nth-child(21) { animation-delay: 1.1s; }
+.loader-text span:nth-child(22) { animation-delay: 1.15s; }
+.loader-text span:nth-child(23) { animation-delay: 1.2s; }
+.loader-text span:nth-child(24) { animation-delay: 1.25s; }
+.loader-text span:nth-child(25) { animation-delay: 1.3s; }
+
+@keyframes letterReveal {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.loader-progress {
+    width: 200px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.1);
+    margin-top: 50px;
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.loader-progress-bar {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #ffffff, #cccccc);
+    animation: progressFill 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s forwards;
+}
+
+@keyframes progressFill {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+/* 로더 사라지는 애니메이션 */
+.loader.loaded {
+    animation: loaderExit 0.8s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+    animation-delay: 0.2s;
+}
+
+.loader.loaded .loader-text span {
+    animation: letterExit 0.4s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+/* 첫 줄 퇴장 */
+.loader.loaded .loader-text span:nth-child(1) { animation-delay: 0s; }
+.loader.loaded .loader-text span:nth-child(2) { animation-delay: 0.02s; }
+.loader.loaded .loader-text span:nth-child(3) { animation-delay: 0.04s; }
+.loader.loaded .loader-text span:nth-child(4) { animation-delay: 0.06s; }
+.loader.loaded .loader-text span:nth-child(5) { animation-delay: 0.08s; }
+.loader.loaded .loader-text span:nth-child(6) { animation-delay: 0.1s; }
+.loader.loaded .loader-text span:nth-child(7) { animation-delay: 0.12s; }
+.loader.loaded .loader-text span:nth-child(8) { animation-delay: 0.14s; }
+.loader.loaded .loader-text span:nth-child(9) { animation-delay: 0.16s; }
+
+/* 두 번째 줄 퇴장 */
+.loader.loaded .loader-text span:nth-child(11) { animation-delay: 0.18s; }
+.loader.loaded .loader-text span:nth-child(12) { animation-delay: 0.2s; }
+.loader.loaded .loader-text span:nth-child(13) { animation-delay: 0.22s; }
+.loader.loaded .loader-text span:nth-child(14) { animation-delay: 0.24s; }
+.loader.loaded .loader-text span:nth-child(15) { animation-delay: 0.26s; }
+.loader.loaded .loader-text span:nth-child(16) { animation-delay: 0.28s; }
+.loader.loaded .loader-text span:nth-child(17) { animation-delay: 0.3s; }
+.loader.loaded .loader-text span:nth-child(18) { animation-delay: 0.32s; }
+.loader.loaded .loader-text span:nth-child(19) { animation-delay: 0.34s; }
+.loader.loaded .loader-text span:nth-child(20) { animation-delay: 0.36s; }
+.loader.loaded .loader-text span:nth-child(21) { animation-delay: 0.38s; }
+.loader.loaded .loader-text span:nth-child(22) { animation-delay: 0.4s; }
+.loader.loaded .loader-text span:nth-child(23) { animation-delay: 0.42s; }
+.loader.loaded .loader-text span:nth-child(24) { animation-delay: 0.44s; }
+.loader.loaded .loader-text span:nth-child(25) { animation-delay: 0.46s; }
+
+@keyframes letterExit {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+
+@keyframes loaderExit {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+        visibility: hidden;
+    }
+}
+
+/* Body scroll lock during loading */
+body.loading {
+    overflow: hidden;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+    .loader-text {
+        font-size: clamp(1.5rem, 8vw, 2.5rem);
+        padding: 0 20px;
+    }
+
+    .loader-progress {
+        width: 150px;
+        margin-top: 40px;
+    }
+}

@@ -1,0 +1,54 @@
+/* Card Component */
+.ab-test-card {
+    background-color: var(--color-white);
+    border-radius: 30px;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.poll-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.card-title {
+    font-family: var(--font-pretendard);
+    font-weight: 700;
+    font-size: 31px;
+    line-height: 16px;
+    letter-spacing: -0.93px;
+    color: var(--color-black);
+}
+
+.card-subtitle {
+    font-family: var(--font-pretendard);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 16px;
+    letter-spacing: -0.6px;
+    color: var(--color-gray);
+}
+
+.problem-card,
+.improvement-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.problem-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.improvement-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}

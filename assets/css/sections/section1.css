@@ -1,0 +1,229 @@
+/* Section 1 - 좌우 분할 레이아웃 */
+.section1 {
+    background-color: var(--color-beige);
+    position: relative;
+    min-height: 100vh;
+    height: 100vh;
+    padding: 0;
+    overflow: hidden;
+}
+
+.section1 .container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* 왼쪽 베이지 영역 */
+.section1-left {
+    width: 50%;
+    height: 100%;
+    background-color: var(--color-beige);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 80px;
+    padding-right: 60px;
+    box-sizing: border-box;
+}
+
+/* 왼쪽 제목 */
+.section1-title {
+    font-family: var(--font-pretendard);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.2;
+    letter-spacing: -0.8px;
+    color: var(--color-black);
+    margin: 0 0 80px 0;
+}
+
+/* 왼쪽 본문 1 */
+.section1-body-1 {
+    font-family: var(--font-pretendard);
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.6;
+    letter-spacing: -0.2px;
+    color: var(--color-black);
+    margin: 0 0 80px 0;
+}
+
+.section1-body-1 p {
+    margin: 0;
+}
+
+/* 왼쪽 본문 2 */
+.section1-body-2 {
+    font-family: var(--font-pretendard);
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.6;
+    letter-spacing: -0.2px;
+    color: var(--color-black);
+    margin: 0;
+}
+
+.section1-body-2 strong {
+    font-weight: 700;
+}
+
+/* 오른쪽 검은 박스 */
+.section1-black-box {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background-color: var(--color-black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 80px;
+    box-sizing: border-box;
+}
+
+/* 검은 박스 제목 */
+.section1-black-box-title {
+    font-family: var(--font-pretendard);
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 1;
+    letter-spacing: -2.4px;
+    color: var(--color-beige);
+    margin: 0 0 120px 0;
+    width: 100%;
+    text-align: center;
+}
+
+/* 검은 박스 설명 문단들 */
+.section1-black-box-note {
+    font-family: var(--font-pretendard);
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.6;
+    letter-spacing: -0.2px;
+    color: var(--color-beige);
+    margin: 0 0 60px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.section1-black-box-note:last-child {
+    margin-bottom: 0;
+}
+
+.section1-black-box-note p {
+    margin: 0;
+}
+
+
+/* Section 1 스크롤 트리거 애니메이션 */
+.section1-animate {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.section1-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section1-animate:nth-child(1) { transition-delay: 0s; }
+.section1-animate:nth-child(2) { transition-delay: 0.15s; }
+.section1-animate:nth-child(3) { transition-delay: 0.3s; }
+
+/* 검은 박스 슬라이드 인 */
+.section1-animate-box {
+    transform: translateX(100%);
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.section1-animate-box.visible {
+    transform: translateX(0);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .section1 {
+        height: auto;
+        min-height: auto;
+    }
+
+    .section1 .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .section1-left {
+        width: 100%;
+        height: auto;
+        padding: 60px 40px;
+    }
+
+    .section1-title {
+        font-size: 28px;
+        margin-bottom: 40px;
+    }
+
+    .section1-body-1,
+    .section1-body-2 {
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+
+    .section1-black-box {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 60px 40px;
+    }
+
+    .section1-black-box-title {
+        font-size: 40px;
+        margin-bottom: 60px;
+    }
+
+    .section1-black-box-note {
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section1-left {
+        padding: 40px 20px;
+    }
+
+    .section1-title {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    .section1-body-1,
+    .section1-body-2 {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 30px;
+    }
+
+    .section1-black-box {
+        padding: 40px 20px;
+    }
+
+    .section1-black-box-title {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+
+    .section1-black-box-note {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+}

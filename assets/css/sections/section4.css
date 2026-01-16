@@ -1,0 +1,186 @@
+/* Section 4 - 현행 업무 프로세스 문제점 */
+.section4 {
+    background-color: var(--color-beige);
+    position: relative;
+    min-height: 100vh;
+    height: 100vh;
+    padding: 0;
+    overflow: hidden;
+}
+
+.section4 .container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-width: 1920px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 80px;
+}
+
+/* 상단 제목 영역 */
+.section4-header {
+    width: 100%;
+    padding: 80px 40px 60px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.section4 .header-3 {
+    font-family: var(--font-pretendard);
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.2;
+    letter-spacing: -1px;
+    color: var(--color-black);
+    margin: 0;
+}
+
+/* 수평 구분선 */
+.section4-divider {
+    width: calc(100% - 80px);
+    height: 1px;
+    background-color: #9a9a9a;
+    margin: 0 40px;
+}
+
+/* 3컬럼 그리드 */
+.section4 .problem-grid {
+    display: flex;
+    width: 100%;
+}
+
+.section4 .problem-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 60px 40px;
+    box-sizing: border-box;
+    border-right: 1px solid #9a9a9a;
+}
+
+.section4 .problem-card:last-child {
+    border-right: none;
+}
+
+/* 카드 제목 */
+.section4 .problem-card .body-title {
+    font-family: var(--font-pretendard);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    color: var(--color-black);
+    margin: 0 0 40px 0;
+}
+
+/* 리스트 스타일 */
+.section4 .problem-card .problem-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.section4 .problem-card .problem-list li {
+    font-family: var(--font-pretendard);
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.6;
+    letter-spacing: -0.2px;
+    color: var(--color-black);
+    margin-bottom: 30px;
+    padding-left: 24px;
+    position: relative;
+}
+
+.section4 .problem-card .problem-list li:last-child {
+    margin-bottom: 0;
+}
+
+.section4 .problem-card .problem-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 20px;
+    color: var(--color-black);
+}
+
+/* 기존 body 클래스 숨김 처리 (하위 호환) */
+.section4 .problem-card .body {
+    display: none;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .section4 {
+        height: auto;
+        min-height: auto;
+    }
+
+    .section4 .container {
+        height: auto;
+    }
+
+    .section4-header {
+        padding: 60px 40px 40px;
+    }
+
+    .section4 .header-3 {
+        font-size: 36px;
+    }
+
+    .section4 .problem-grid {
+        flex-direction: column;
+    }
+
+    .section4 .problem-card {
+        border-right: none;
+        border-bottom: 1px solid #9a9a9a;
+        padding: 40px;
+    }
+
+    .section4 .problem-card:last-child {
+        border-bottom: none;
+    }
+
+    .section4 .problem-card .body-title {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .section4 .problem-card .problem-list li {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section4-header {
+        padding: 40px 20px 30px;
+    }
+
+    .section4-divider {
+        width: calc(100% - 40px);
+        margin: 0 20px;
+    }
+
+    .section4 .header-3 {
+        font-size: 28px;
+    }
+
+    .section4 .problem-card {
+        padding: 30px 20px;
+    }
+
+    .section4 .problem-card .body-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .section4 .problem-card .problem-list li {
+        font-size: 16px;
+        margin-bottom: 16px;
+    }
+}

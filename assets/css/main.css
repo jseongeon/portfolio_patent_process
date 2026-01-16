@@ -1,0 +1,154 @@
+/* Main CSS - Import all stylesheets */
+
+/* Base */
+@import url('./base/variables.css');
+@import url('./base/reset.css');
+@import url('./base/typography.css');
+
+/* Components */
+@import url('./components/card.css');
+@import url('./components/progress-bar.css');
+@import url('./components/testimonial.css');
+@import url('./components/progress-nav.css');
+@import url('./components/scroll-animations.css');
+@import url('./components/horizontal-scroll.css');
+@import url('./components/loading.css');
+
+/* Sections */
+@import url('./sections/intro.css');
+@import url('./sections/section1.css');
+@import url('./sections/section2.css');
+@import url('./sections/section3.css');
+@import url('./sections/section4.css');
+@import url('./sections/section5.css');
+@import url('./sections/section6.css');
+@import url('./sections/section7.css');
+@import url('./sections/section8.css');
+@import url('./sections/section9.css');
+@import url('./sections/section10.css');
+@import url('./sections/section11.css');
+@import url('./sections/section12.css');
+@import url('./sections/section13.css');
+@import url('./sections/section14.css');
+@import url('./sections/section15.css');
+
+/* Responsive Design - Global */
+
+/* Large Desktop (1440px ~ 1920px) */
+@media (max-width: 1920px) {
+    .container {
+        max-width: 100%;
+    }
+}
+
+/* Desktop (1024px ~ 1440px) */
+@media (max-width: 1440px) {
+    .header-1 {
+        font-size: 80px;
+        line-height: 90px;
+    }
+
+    .header-2 {
+        font-size: 48px;
+        line-height: 54px;
+    }
+}
+
+/* Tablet (768px ~ 1024px) */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .header-1 {
+        font-size: 60px;
+        line-height: 70px;
+    }
+
+    .header-2 {
+        font-size: 40px;
+        line-height: 48px;
+    }
+
+    .header-3 {
+        font-size: 40px;
+        line-height: 48px;
+    }
+}
+
+/* Mobile (480px ~ 768px) */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    .header-1 {
+        font-size: 36px;
+        line-height: 42px;
+        letter-spacing: -1.5px;
+    }
+
+    .header-2 {
+        font-size: 28px;
+        line-height: 34px;
+        letter-spacing: -1px;
+    }
+
+    .header-3 {
+        font-size: 28px;
+        line-height: 34px;
+        letter-spacing: -1px;
+    }
+
+    .body-1 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .body-2 {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    .body {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .note {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+
+/* Small Mobile (~480px) */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 12px;
+    }
+
+    .header-1 {
+        font-size: 28px;
+        line-height: 34px;
+    }
+
+    .header-2 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .header-3 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .body-1 {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    .body {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}

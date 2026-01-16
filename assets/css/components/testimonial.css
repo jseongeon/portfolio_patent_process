@@ -1,0 +1,123 @@
+/* Testimonial Component */
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 600px);
+    gap: 50px;
+}
+
+.testimonial-card {
+    background-color: var(--color-white);
+    border-radius: 20px;
+    padding: 31px;
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonial-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.speech-bubble {
+    background-color: var(--color-beige);
+    border: 1px solid var(--color-black);
+    border-radius: 30px;
+    padding: 40px 30px;
+    position: relative;
+}
+
+.speech-bubble.dark {
+    background-color: var(--color-beige);
+    border: 1px solid var(--color-white);
+}
+
+.testimonial-text {
+    font-family: var(--font-pretendard);
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28.8px;
+    letter-spacing: -0.24px;
+    color: var(--color-black);
+}
+
+.employee-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.employee-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 30px;
+    object-fit: cover;
+    display: block;
+}
+
+.employee-name {
+    font-family: var(--font-pretendard);
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 60px;
+    letter-spacing: -0.6px;
+    color: var(--color-black);
+}
+
+.employee-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+    width: 100%;
+}
+
+.employee-title {
+    font-family: var(--font-pretendard);
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 43.2px;
+    letter-spacing: -0.792px;
+    color: var(--color-black);
+}
+
+.employee-desc {
+    font-family: var(--font-pretendard);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: var(--color-black);
+}
+
+.improvement-feedback-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 600px);
+    gap: 50px;
+}
+
+.improvement-feedback-card {
+    border-radius: 20px;
+    padding: 31px;
+}
+
+.improvement-feedback-card.dark {
+    background-color: var(--color-black);
+}
+
+.improvement-feedback-card.dark .testimonial-text {
+    color: var(--color-white);
+}
+
+.improvement-feedback-card.dark .employee-name {
+    color: var(--color-white);
+}
+
+.improvement-feedback-card.dark .employee-title {
+    color: var(--color-white);
+}
+
+.improvement-feedback-card.dark .employee-desc {
+    color: var(--color-white);
+}

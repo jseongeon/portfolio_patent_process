@@ -1,0 +1,77 @@
+/* Typography */
+.header-1 {
+    font-family: var(--font-pretendard);
+    font-weight: 500;
+    font-size: 120px;
+    line-height: 114px;
+    letter-spacing: -4.8px;
+    text-align: center;
+}
+
+.header-2 {
+    font-family: var(--font-pretendard);
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 57px;
+    letter-spacing: -2.4px;
+    text-align: center;
+}
+
+.header-3 {
+    font-family: var(--font-pretendard);
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 60px;
+    letter-spacing: -0.6px;
+    text-align: center;
+}
+
+.body-1 {
+    font-family: var(--font-pretendard);
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 43.2px;
+    letter-spacing: -0.792px;
+}
+
+.body-2 {
+    font-family: var(--font-pretendard);
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 33.6px;
+    letter-spacing: -0.616px;
+}
+
+.body {
+    font-family: var(--font-pretendard);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: -0.2px;
+}
+
+.note {
+    font-family: var(--font-pretendard);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: -0.2px;
+}
+
+.body-title {
+    font-family: var(--font-pretendard);
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 60px;
+    letter-spacing: -0.6px;
+    color: var(--color-black);
+}
+
+.body-question {
+    font-family: var(--font-pretendard);
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 60px;
+    letter-spacing: -0.6px;
+    white-space: pre-line;
+}

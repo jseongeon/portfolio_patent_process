@@ -1,0 +1,93 @@
+/* Scroll Animations */
+
+/* 기본 fade-in 애니메이션 */
+.fade-in-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 섹션 4, 8 - 카드 기본 스타일 (가로 스크롤이 아닌 경우에만) */
+.problem-card,
+.improvement-card {
+    opacity: 1;
+    transform: none;
+}
+
+/* 가로 스크롤 섹션은 horizontal-scroll.css에서 관리 */
+
+/* 딜레이 클래스 */
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.3s; }
+.delay-3 { transition-delay: 0.5s; }
+
+/* 섹션 5 - 리스트 아이템 애니메이션 */
+.section5-list {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.section5-list.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* 섹션 10, 11 - Progress fill 애니메이션 */
+.section10-progress-fill,
+.section11-progress-fill {
+    transition: width 0.8s ease-out;
+}
+
+/* 섹션 12, 14 - 카드 기본 스타일 (가로 스크롤이 아닌 경우에만) */
+.testimonial-card,
+.feedback-card {
+    opacity: 1;
+    transform: none;
+}
+
+/* 가로 스크롤 섹션은 horizontal-scroll.css에서 관리 */
+
+/* 반응형 - 모바일에서 애니메이션 간소화 */
+@media (max-width: 768px) {
+    .fade-in-item,
+    .problem-card,
+    .improvement-card,
+    .section5-list,
+    .testimonial-card,
+    .feedback-card {
+        transform: translateY(20px);
+    }
+
+    .section5-list {
+        transform: translateX(15px);
+    }
+
+    .delay-1 { transition-delay: 0.05s; }
+    .delay-2 { transition-delay: 0.15s; }
+    .delay-3 { transition-delay: 0.25s; }
+}
+
+/* 애니메이션 비활성화 (접근성) */
+@media (prefers-reduced-motion: reduce) {
+    .fade-in-item,
+    .problem-card,
+    .improvement-card,
+    .section5-list,
+    .testimonial-card,
+    .feedback-card {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .section10-progress-fill,
+    .section11-progress-fill {
+        transition: none;
+    }
+}

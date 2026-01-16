@@ -1,0 +1,369 @@
+/* Horizontal Scroll Sections - 카드 하나씩 보이기 */
+
+/* 가로 스크롤 섹션 기본 스타일 */
+.horizontal-scroll-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.horizontal-scroll-section .sticky-wrapper {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 카드 컨테이너 - 한 장씩만 보이도록 */
+.horizontal-scroll-track {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 모든 카드 기본 스타일 - 숨김 (오른쪽에서 대기) */
+.horizontal-scroll-section .horizontal-scroll-track > * {
+    position: absolute !important;
+    opacity: 0 !important;
+    transform: translateX(200px) scale(0.85) !important;
+    filter: blur(8px) !important;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    pointer-events: none !important;
+}
+
+/* 이전 카드 (왼쪽으로 나감) */
+.horizontal-scroll-section .horizontal-scroll-track > *.prev-card {
+    transform: translateX(-200px) scale(0.85) !important;
+}
+
+/* 활성 카드만 보이기 */
+.horizontal-scroll-section .horizontal-scroll-track > *.active {
+    position: relative !important;
+    opacity: 1 !important;
+    transform: translateX(0) scale(1) !important;
+    filter: blur(0) !important;
+    pointer-events: auto !important;
+    animation: cardPop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+@keyframes cardPop {
+    0% {
+        transform: translateX(80px) scale(0.9);
+        opacity: 0.5;
+    }
+    50% {
+        transform: translateX(-10px) scale(1.02);
+    }
+    100% {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
+}
+
+/* 화살표 버튼 */
+.slide-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--color-white);
+    border: 2px solid #ddd;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.slide-arrow:hover {
+    background: #f5f5f5;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-50%) scale(1.05);
+}
+
+.slide-arrow:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.slide-arrow:disabled:hover {
+    transform: translateY(-50%);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.slide-arrow.prev {
+    left: 40px;
+}
+
+.slide-arrow.next {
+    right: 40px;
+}
+
+.slide-arrow svg {
+    width: 28px;
+    height: 28px;
+    fill: none;
+    stroke: var(--color-black);
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* Section 8 화살표 (어두운 배경) */
+.section8 .slide-arrow {
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.section8 .slide-arrow:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.section8 .slide-arrow svg {
+    stroke: var(--color-white);
+}
+
+/* Section 4 - 카드 슬라이드 */
+.section4.horizontal-scroll-section {
+    height: 100vh;
+    background-color: var(--color-beige);
+}
+
+.section4.horizontal-scroll-section .sticky-wrapper {
+    justify-content: center;
+    padding: 0;
+}
+
+.section4.horizontal-scroll-section .section4-header {
+    padding: 40px 60px 30px;
+    flex-shrink: 0;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.section4.horizontal-scroll-section .section4-divider {
+    width: calc(100% - 120px);
+    max-width: 800px;
+    margin: 0 auto 40px;
+    flex-shrink: 0;
+}
+
+.section4 .horizontal-scroll-track {
+    min-height: 250px;
+}
+
+.section4.horizontal-scroll-section .horizontal-scroll-track .problem-card {
+    flex: 0 0 400px !important;
+    width: 400px !important;
+    max-width: 400px !important;
+    min-height: auto;
+    border: 1px solid #9a9a9a;
+    border-right: 1px solid #9a9a9a !important;
+    border-radius: 16px;
+    background: var(--color-white);
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+/* Section 8 - 카드 슬라이드 */
+.section8.horizontal-scroll-section {
+    height: 100vh;
+}
+
+.section8.horizontal-scroll-section .sticky-wrapper {
+    justify-content: center;
+    padding: 0;
+}
+
+.section8.horizontal-scroll-section .section8-header {
+    padding: 40px 60px 30px;
+    flex-shrink: 0;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.section8.horizontal-scroll-section .section8-divider {
+    width: calc(100% - 120px);
+    max-width: 800px;
+    margin: 0 auto 40px;
+    flex-shrink: 0;
+}
+
+.section8 .horizontal-scroll-track {
+    min-height: 250px;
+}
+
+.section8.horizontal-scroll-section .horizontal-scroll-track .improvement-card {
+    flex: 0 0 400px !important;
+    width: 400px !important;
+    max-width: 400px !important;
+    min-height: auto;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-right: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+/* Section 12 - 카드 슬라이드 */
+.section12.horizontal-scroll-section {
+    height: 100vh;
+}
+
+.section12.horizontal-scroll-section .sticky-wrapper {
+    justify-content: center;
+    align-items: center;
+}
+
+.section12 .horizontal-scroll-track {
+    min-height: 300px;
+}
+
+.section12.horizontal-scroll-section .horizontal-scroll-track .testimonial-card {
+    flex: 0 0 650px !important;
+    width: 650px !important;
+    max-width: 650px !important;
+}
+
+/* Section 14 - 카드 슬라이드 */
+.section14.horizontal-scroll-section {
+    height: 100vh;
+}
+
+.section14.horizontal-scroll-section .sticky-wrapper {
+    justify-content: center;
+    align-items: center;
+}
+
+.section14 .horizontal-scroll-track {
+    min-height: 300px;
+}
+
+.section14.horizontal-scroll-section .horizontal-scroll-track .feedback-card {
+    flex: 0 0 650px !important;
+    width: 650px !important;
+    max-width: 650px !important;
+}
+
+/* 카드 인디케이터 */
+.slide-indicator {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    padding: 30px 0;
+    flex-shrink: 0;
+}
+
+.slide-indicator .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.2);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    cursor: pointer;
+}
+
+.slide-indicator .dot:hover {
+    background: rgba(0, 0, 0, 0.4);
+    transform: scale(1.15);
+}
+
+.slide-indicator .dot.active {
+    background: var(--color-black);
+    transform: scale(1.4);
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.15);
+}
+
+.section8 .slide-indicator .dot {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.section8 .slide-indicator .dot:hover {
+    background: rgba(255, 255, 255, 0.5);
+    transform: scale(1.15);
+}
+
+.section8 .slide-indicator .dot.active {
+    background: var(--color-white);
+    transform: scale(1.4);
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive - 태블릿/모바일에서는 세로 스크롤 */
+@media (max-width: 1024px) {
+    .horizontal-scroll-section {
+        height: auto !important;
+    }
+
+    .horizontal-scroll-section .sticky-wrapper {
+        position: relative;
+        height: auto;
+        padding: 60px 20px;
+    }
+
+    .horizontal-scroll-track {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .horizontal-scroll-track > * {
+        position: relative !important;
+        opacity: 1 !important;
+        transform: none !important;
+        pointer-events: auto !important;
+    }
+
+    .section4.horizontal-scroll-section .section4-header,
+    .section8.horizontal-scroll-section .section8-header {
+        padding: 0 0 30px;
+    }
+
+    .section4.horizontal-scroll-section .section4-divider,
+    .section8.horizontal-scroll-section .section8-divider {
+        width: 100%;
+        margin: 0 0 30px;
+    }
+
+    .section4.horizontal-scroll-section .horizontal-scroll-track .problem-card,
+    .section8.horizontal-scroll-section .horizontal-scroll-track .improvement-card {
+        width: 100% !important;
+        max-width: 100%;
+        min-height: auto;
+    }
+
+    .section12.horizontal-scroll-section .horizontal-scroll-track .testimonial-card,
+    .section14.horizontal-scroll-section .horizontal-scroll-track .feedback-card {
+        width: 100% !important;
+        max-width: 100%;
+    }
+
+    .slide-indicator,
+    .slide-arrow {
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .horizontal-scroll-section .sticky-wrapper {
+        padding: 40px 16px;
+    }
+
+    .section4.horizontal-scroll-section .horizontal-scroll-track .problem-card,
+    .section8.horizontal-scroll-section .horizontal-scroll-track .improvement-card {
+        padding: 30px 20px;
+    }
+}
