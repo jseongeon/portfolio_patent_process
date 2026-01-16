@@ -93,6 +93,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 텍스트 Parallax 효과
     function initTextParallax() {
+        // 모바일/태블릿에서는 parallax 비활성화
+        if (window.innerWidth <= 1024) {
+            return;
+        }
+
         const parallaxSections = ['intro', 'section3', 'section9', 'section13', 'section15'];
 
         function onScroll() {

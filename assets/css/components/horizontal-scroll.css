@@ -320,12 +320,13 @@
         gap: 30px;
     }
 
-    .horizontal-scroll-track > * {
+    .horizontal-scroll-section .horizontal-scroll-track > * {
         position: relative !important;
         opacity: 1 !important;
         transform: none !important;
         filter: none !important;
         pointer-events: auto !important;
+        animation: none !important;
     }
 
     .section4.horizontal-scroll-section .section4-header,
