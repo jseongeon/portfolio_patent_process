@@ -324,6 +324,7 @@
         position: relative !important;
         opacity: 1 !important;
         transform: none !important;
+        filter: none !important;
         pointer-events: auto !important;
     }
 
