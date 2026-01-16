@@ -276,3 +276,66 @@
         padding-right: 10px;
     }
 }
+
+/* 소형 모바일 */
+@media (max-width: 480px) {
+    .section11 .container {
+        padding: 30px 12px;
+    }
+
+    .section11-question {
+        margin-bottom: 30px;
+        gap: 16px;
+    }
+
+    .section11-question-title {
+        font-size: 22px;
+        line-height: 30px;
+        letter-spacing: -0.5px;
+    }
+
+    .section11-question-desc {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .section11-poll-card {
+        padding: 16px;
+        border-radius: 16px;
+    }
+
+    .section11-poll-title {
+        font-size: 15px;
+        line-height: 1.4;
+        margin-bottom: 16px;
+    }
+
+    .section11-poll-subtitle {
+        font-size: 12px;
+        margin-top: 16px;
+        line-height: 1.4;
+    }
+
+    .section11-progress-item {
+        height: 40px;
+        margin-bottom: 12px;
+    }
+
+    .section11-progress-bg,
+    .section11-progress-fill {
+        height: 40px;
+    }
+
+    .section11-progress-label {
+        font-size: 12px;
+        left: 10px;
+    }
+
+    .section11-progress-value {
+        font-size: 12px;
+    }
+
+    .section11-progress-fill {
+        padding-right: 8px;
+    }
+}

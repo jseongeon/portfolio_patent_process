@@ -199,3 +199,34 @@
         margin-bottom: 30px;
     }
 }
+
+/* 소형 모바일 */
+@media (max-width: 480px) {
+    .section5-left {
+        padding: 30px 16px;
+        min-height: 200px;
+    }
+
+    .section5-insight-title {
+        font-size: 22px;
+        margin-bottom: 30px;
+    }
+
+    .section5-main-title {
+        font-size: 20px;
+    }
+
+    .section5-right {
+        padding: 30px 16px;
+    }
+
+    .section5-list {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 24px;
+    }
+
+    .section5-list p br {
+        display: none;
+    }
+}

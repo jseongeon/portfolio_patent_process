@@ -59,3 +59,17 @@
         line-height: 34px;
     }
 }
+
+/* 소형 모바일 */
+@media (max-width: 480px) {
+    .section3 .container {
+        min-height: 50vh;
+        padding: 40px 12px;
+    }
+
+    .section3-text {
+        font-size: 22px;
+        line-height: 30px;
+        letter-spacing: -0.3px;
+    }
+}

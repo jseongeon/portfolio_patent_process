@@ -184,3 +184,40 @@
         margin-bottom: 16px;
     }
 }
+
+/* 소형 모바일 */
+@media (max-width: 480px) {
+    .section8-header {
+        padding: 30px 16px 20px;
+    }
+
+    .section8-divider {
+        width: calc(100% - 32px);
+        margin: 0 16px;
+    }
+
+    .section8 .header-3 {
+        font-size: 22px;
+        letter-spacing: -0.5px;
+    }
+
+    .section8 .improvement-card {
+        padding: 24px 16px;
+    }
+
+    .section8 .improvement-card .body-title {
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+
+    .section8 .improvement-card .improvement-list li {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 12px;
+        padding-left: 16px;
+    }
+
+    .section8 .improvement-card .improvement-list li::before {
+        font-size: 14px;
+    }
+}

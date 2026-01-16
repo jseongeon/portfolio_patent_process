@@ -87,6 +87,10 @@
 }
 
 @media (max-width: 768px) {
+    .section2 {
+        min-height: auto;
+    }
+
     .section2 .container {
         padding: 40px 16px;
     }
@@ -95,5 +99,20 @@
         font-size: 28px;
         line-height: 34px;
         margin-bottom: 30px;
+        white-space: normal;
+    }
+}
+
+/* 소형 모바일 */
+@media (max-width: 480px) {
+    .section2 .container {
+        padding: 30px 12px;
+    }
+
+    .section2 .header-2 {
+        font-size: 22px;
+        line-height: 30px;
+        letter-spacing: -1px;
+        margin-bottom: 24px;
     }
 }

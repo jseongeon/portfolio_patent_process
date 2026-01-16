@@ -120,3 +120,32 @@
         margin-top: 30px;
     }
 }
+
+/* 소형 모바일 */
+@media (max-width: 480px) {
+    .intro .container {
+        padding: 30px 12px;
+        min-height: 100svh;
+    }
+
+    .intro-top {
+        font-size: 20px;
+        line-height: 26px;
+        letter-spacing: -1px;
+        margin-bottom: 20px;
+    }
+
+    .intro-title {
+        font-size: 26px;
+        line-height: 34px;
+        letter-spacing: -1px;
+        margin: 30px 0;
+    }
+
+    .intro-bottom {
+        font-size: 20px;
+        line-height: 26px;
+        letter-spacing: -1px;
+        margin-top: 20px;
+    }
+}

@@ -162,7 +162,19 @@ body.loading {
     overflow: hidden;
 }
 
-/* 반응형 */
+/* 반응형 - 태블릿 */
+@media (max-width: 1024px) {
+    .loader-text {
+        font-size: clamp(1.8rem, 7vw, 3.5rem);
+    }
+
+    .loader-progress {
+        width: 180px;
+        margin-top: 45px;
+    }
+}
+
+/* 반응형 - 모바일 */
 @media (max-width: 768px) {
     .loader-text {
         font-size: clamp(1.5rem, 8vw, 2.5rem);
@@ -172,5 +184,19 @@ body.loading {
     .loader-progress {
         width: 150px;
         margin-top: 40px;
+    }
+}
+
+/* 반응형 - 소형 모바일 */
+@media (max-width: 480px) {
+    .loader-text {
+        font-size: clamp(1.2rem, 7vw, 2rem);
+        padding: 0 16px;
+        letter-spacing: 0.02em;
+    }
+
+    .loader-progress {
+        width: 120px;
+        margin-top: 30px;
     }
 }

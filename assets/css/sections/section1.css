@@ -227,3 +227,41 @@
         margin-bottom: 30px;
     }
 }
+
+/* 소형 모바일 */
+@media (max-width: 480px) {
+    .section1-left {
+        padding: 30px 16px;
+    }
+
+    .section1-title {
+        font-size: 20px;
+        margin-bottom: 24px;
+    }
+
+    .section1-body-1,
+    .section1-body-2 {
+        font-size: 13px;
+        line-height: 1.6;
+        margin-bottom: 24px;
+    }
+
+    .section1-body-2 br {
+        display: none;
+    }
+
+    .section1-black-box {
+        padding: 30px 16px;
+    }
+
+    .section1-black-box-title {
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
+
+    .section1-black-box-note {
+        font-size: 13px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+}

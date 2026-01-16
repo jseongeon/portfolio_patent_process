@@ -184,3 +184,44 @@
         margin-bottom: 16px;
     }
 }
+
+/* 소형 모바일 */
+@media (max-width: 480px) {
+    .section4-header {
+        padding: 30px 16px 20px;
+    }
+
+    .section4-divider {
+        width: calc(100% - 32px);
+        margin: 0 16px;
+    }
+
+    .section4 .header-3 {
+        font-size: 22px;
+        letter-spacing: -0.5px;
+    }
+
+    .section4 .problem-card {
+        padding: 24px 16px;
+    }
+
+    .section4 .problem-card .body-title {
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+
+    .section4 .problem-card .problem-list li {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 12px;
+        padding-left: 16px;
+    }
+
+    .section4 .problem-card .problem-list li::before {
+        font-size: 14px;
+    }
+
+    .section4 .problem-card .problem-list li br {
+        display: none;
+    }
+}

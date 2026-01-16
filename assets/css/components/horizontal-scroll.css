@@ -362,8 +362,34 @@
         padding: 40px 16px;
     }
 
+    .horizontal-scroll-track {
+        gap: 24px;
+    }
+
     .section4.horizontal-scroll-section .horizontal-scroll-track .problem-card,
     .section8.horizontal-scroll-section .horizontal-scroll-track .improvement-card {
         padding: 30px 20px;
+    }
+}
+
+/* 소형 모바일 */
+@media (max-width: 480px) {
+    .horizontal-scroll-section .sticky-wrapper {
+        padding: 30px 12px;
+    }
+
+    .horizontal-scroll-track {
+        gap: 20px;
+    }
+
+    .section4.horizontal-scroll-section .horizontal-scroll-track .problem-card,
+    .section8.horizontal-scroll-section .horizontal-scroll-track .improvement-card {
+        padding: 24px 16px;
+        border-radius: 12px;
+    }
+
+    .section12.horizontal-scroll-section .horizontal-scroll-track .testimonial-card,
+    .section14.horizontal-scroll-section .horizontal-scroll-track .feedback-card {
+        border-radius: 8px;
     }
 }

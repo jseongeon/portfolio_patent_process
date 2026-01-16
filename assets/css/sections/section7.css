@@ -72,3 +72,16 @@
         margin-bottom: 30px;
     }
 }
+
+/* 소형 모바일 */
+@media (max-width: 480px) {
+    .section7 {
+        padding: 30px 12px;
+    }
+
+    .section7 .header-2 {
+        font-size: 22px;
+        letter-spacing: -1px;
+        margin-bottom: 24px;
+    }
+}
